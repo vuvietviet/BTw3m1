@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng 20 số đầu tiên trong Fibonacci</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    let n1 = 0;
+    let n2 = 1;
+    let count = 1;
+    let sum = 0;
+    while (count<20) {
+        let nextTerm = n1 +n2;
+        n1 = n2;
+        n2 = nextTerm;
+        sum = sum + n1;
+        count++;
+    }
+    alert(sum);
+</script>

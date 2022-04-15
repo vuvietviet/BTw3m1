@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị số nguyên tố đầu tiên</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    let i = 2;
+    let count = 0;
+    while (count<20) {
+        let check = true;
+        for (let j=2; j<= i/2; j++) {
+            if (i%j == 0) {
+                check = false;
+                break;
+            }
+        }
+        if (check) {
+            document.write('Prime number is: ' + i + "<br/>");
+            i++;
+            count++;
+        }else {
+            i++;
+        }
+    }
+</script>

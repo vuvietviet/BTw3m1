@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đoán số</title>
+</head>
+<body>
+<button onclick="play()" >Chơi</button>
+</body>
+</html>
+
+<script>
+    function play() {
+        let khoangtu = parseInt(prompt('Bạn muốn đoán trong khoảng từ: ', ''));
+        let khoangden = parseInt(prompt('đến: ',''));
+        let maychon = parseInt(Math.random() * (khoangden - khoangtu) + khoangtu);
+        let count = 0;
+        while (count<3) {
+            let chon = parseInt(prompt('Số bạn chọn là: ',''));
+            if (chon === maychon) {
+                alert('Chúc mừng!');
+                break;
+            } else if (chon>maychon) {
+                alert('Lớn hơn');
+                count++;
+            }else {
+                alert('Bé thua');
+                count++;
+            }
+        }
+        if (count>=3) {
+            alert('Bạn đã thua!');
+        }
+    }
+</script>

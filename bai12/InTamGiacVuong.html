@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In tam giác vuông</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    let sout = " ";
+    for (let i=1; i<=5;i++) {
+        sout = sout + "*";
+        document.write(sout + "<br/>");
+    }
+    document.write("<hr/>");
+
+    let sout2 = " ";
+    for (let i=0; i<5;i++) {
+        for (let j = 5 - i; j > 0 ; j--) {
+            sout2 = sout2 + "*";
+        }
+
+       sout2 += "<br/>";
+    }
+    document.write(sout2);
+    document.write("<hr/>");
+
+    let sout3 = " ";
+    for (let i=0; i<5;i++) {
+        for (let j = 4 - i; j > 0 ; j--) {
+            sout3 = sout3 + "&nbsp" + "&nbsp";
+        }
+        for (let k =1;k <=i+1;k++) {
+            sout3 = sout3 + "*";
+        }
+        sout3 += "<br/>";
+    }
+    document.write(sout3);
+    document.write("<hr/>");
+
+    let sout4 = " ";
+    for (let i=0; i<5;i++) {
+        for (let j = 0; j < i ; j++) {
+            sout4 = sout4 + "&nbsp" + "&nbsp";
+        }
+        for (let k =5-i;k >0;k--) {
+            sout4 = sout4 + "*";
+        }
+        sout4 += "<br/>";
+    }
+    document.write(sout4);
+</script>

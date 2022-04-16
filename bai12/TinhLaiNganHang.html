@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi ngân hàng</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    let tienBanDau = parseInt(prompt('Nhập số tiền ban đầu: ', ''));
+    let laiXuat = parseInt(prompt('Nhập lãi xuất ngân hàng (%): ',''));
+    let soThangChoVay = parseInt(prompt('Số tháng cho vay là: ',''));
+    let tienLai = 0;
+    let tienHienTai = laiXuat/100 * tienBanDau + tienBanDau;
+    for (let i = 1; i<soThangChoVay; i++) {
+        tienLai = laiXuat/100 * tienHienTai;
+        tienHienTai = tienHienTai + tienLai;
+    }
+    document.write('Tổng tiền lãi ngân hàng nhận được là: ' + (tienHienTai - tienBanDau));
+</script>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Print Rectangle</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    let asterisk = '';
+    for (let j = 1; j <= 50; j++) {
+        asterisk = asterisk + "*";
+    }
+    asterisk = asterisk + "<br/>";
+    for (let i = 0; i < 6; i++) {
+        for (let h = 1; h <= 50; h++) {
+            if ((h===1) || (h===50)) {
+                asterisk = asterisk + "*";
+            } else {
+                asterisk = asterisk + "&nbsp" + "&nbsp";
+            }
+        }
+        asterisk = asterisk + "<br/>";
+    }
+    for (let b = 1; b <= 50; b++) {
+        asterisk = asterisk + "*";
+    }
+    document.write(asterisk);
+</script>

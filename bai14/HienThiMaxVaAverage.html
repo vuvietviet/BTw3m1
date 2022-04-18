@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hien thi max va average</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    let arr = [6,90,44,3,6,50,99,7,8,2];
+    let max = arr[0];
+    let total = 0;
+    for (let i=0;i<arr.length;i++) {
+        if (max<arr[i]) {
+            max = arr[i];
+        }
+        total = total + arr[i];
+    }
+    let ave = total/arr.length;
+    document.write("max = " + max + "<br/>");
+    document.write('Gia tri trung binh la: ' + ave);
+</script>

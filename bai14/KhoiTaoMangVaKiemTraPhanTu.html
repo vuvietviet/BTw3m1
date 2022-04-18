@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhap mang va kiem tra phan tu</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    let arr = [2,4,3,-6,-9,7,1,8,5,10];
+    let v = parseInt(prompt('Nhap V: ',''));
+    let disPlay = 'V is not in the array';
+    for (let i=0; i<arr.length;i++) {
+        if (v===arr[i]) {
+            disPlay='V is in the array';
+        }
+    }
+    document.write(disPlay);
+
+</script>

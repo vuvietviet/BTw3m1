@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tic tac toe</title>
+</head>
+<body>
+<h3>Caro Game Simple</h3>
+<p id="carogame" />
+<input type="button" value="Player1" onclick="changeValue1()">
+<input type="button" value="Player2" onclick="changeValue2()">
+</body>
+</html>
+
+<script>
+    let b = document.getElementById("carogame");
+
+    let board = [];
+    let data = "";
+    for (let i = 0; i < 5; i++) {
+        board[i] = new Array('.', '.', '.', '.', '.');
+    }
+
+    for (let i = 0; i < 5; i++) {
+        data += "<br/>";
+        for (let j = 0; j < 5; j++) {
+            data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+        }
+    }
+    data += "<br/><br/><input type='button' value='Player1' onclick='changeValue1()'/>" +
+        "<input type='button' value='Player2' onclick='changeValue2()'>";
+    b.innerHTML = data;
+    function changeValue1() {
+        let positionX1 = prompt("X1: ");
+        let positionY1 = prompt("Y1: ");
+        data = "";
+        board[positionX1][positionY1] = "x";
+        for (let i = 0; i < 5; i++) {
+            data += "<br/>";
+            for (let j = 0; j < 5; j++) {
+                data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+            }
+        }
+        data += "<br/><br/><input type='button' value='Player1' onclick='changeValue1()'/>" +
+            "<input type='button' value='Player2' onclick='changeValue2()'>";
+        b.innerHTML = "<hr/>" + data;
+    }
+    function changeValue2() {
+        let positionX2 = prompt("X2: ");
+        let positionY2 = prompt("Y2: ");
+        data = "";
+        board[positionX2][positionY2] = "o";
+        for (let i = 0; i < 5; i++) {
+            data += "<br/>";
+            for (let j = 0; j < 5; j++) {
+                data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+            }
+        }
+        data += "<br/><br/><input type='button' value='Player1' onclick='changeValue1()'/>" +
+            "<input type='button' value='Player2' onclick='changeValue2()'>";
+        b.innerHTML = "<hr/>" + data;
+    }
+    // if (board[i][j] === 'x' && board[i][j+1] === 'x' && (board[i][j+2] === 'x')) {
+    //     alert('Player1 win');
+    // }else if (board[i][j] === 'o' && board[i][j+1] === 'o' && (board[i][j+2] === 'o')) {
+    //     alert('Player2 win');
+    // }else if (board[i][j] === 'x' && board[i+1][j] === 'x' && (board[i+2][j] === 'x')) {
+    //     alert('Player1 win');
+    // }else if (board[i][j] === 'o' && board[i+1][j] === 'o' && (board[i+2][j] === 'o')) {
+    //     alert('Player2 win');
+    // }else if (board[i][j] === 'x' && board[i+1][j+1] === 'x' && (board[i+2][j+2] === 'x')) {
+    //     alert('Player1 win');
+    // }else if (board[i][j] === 'o' && board[i+1][j+1] === 'o' && (board[i+2][j+2] === 'o')) {
+    //     alert('Player2 win');
+    // }else if (board[i][j] === 'x' && board[i-1][j+1] === 'x' && (board[i-2][j+2] === 'x')) {
+    //     alert('Player1 win');
+    // }else if (board[i][j] === 'o' && board[i-1][j+1] === 'o' && (board[i-2][j+2] === 'o')) {
+    //     alert('Player2 win');
+    // }
+</script>

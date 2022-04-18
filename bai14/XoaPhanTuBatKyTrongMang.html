@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xoa phan tu bat ky trong mang</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    let arr = [2,4,3,-6,-9,7,1,8,5,10];
+    let v = parseInt(prompt('Nhap V: ',''));
+    for (let i=0; i<arr.length;i++) {
+        if (v===arr[i]) {
+            for (let j = i; j<arr.length;j++) {
+                arr[j] = arr[j+1];
+            }
+            arr[arr.length-1] = 0;
+        }
+    }
+    document.write(arr);
+</script>

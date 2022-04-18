@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dictionary</title>
+</head>
+<body>
+<input type="text" id="English" value="English"/>
+<input type="button" onclick="dich()" value="Dich"/>
+<input type="text" id="Vietnamese" value="Tiếng Việt"/>
+</body>
+</html>
+
+<script>
+    function dich() {
+        let e = document.getElementById('English').value;
+        let eArr = ['school','class','student','pen','notebook'];
+        let vArr = ['trường','lớp','học sinh','bút','vở'];
+        for (let i=0; i<eArr.length; i++) {
+            if (e==eArr[i]) {
+                document.getElementById('Vietnamese').value = vArr[i];
+            }
+        }
+        if (i>=eArr.length) {
+            document.getElementById('Vietnamese').value = "Can't found!";
+        }
+    }
+</script>

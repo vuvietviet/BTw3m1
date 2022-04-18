@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hien thi max cua mang</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    let arr = [6,90,44,3,6,50,99,7,8,2];
+    let max = arr[0];
+    let j = 0;
+    for (let i=0;i<arr.length;i++) {
+        if (max<arr[i]) {
+            max = arr[i];
+            j = i;
+        }
+    }
+    document.write("max = " + max + " tai vi tri " + j);
+</script>

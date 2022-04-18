@@ -20,18 +20,13 @@
     let chuViHV = 4*a;
     let dienTichHV = a*a;
     let sum = 0;
-    let d = "";
-    let tamgiac = "";
+    let tamgiac = "a,b,c khong la 3 canh cua tam giac";
 
     for (let i = a; i<=b; i++) {
          sum = sum + i;
     }
 
-    if ((a>=0) && (a<2000)) {
-        d = "thuoc the ki tu 1 den 20";
-    } else {
-        d = "thuoc the ki thu 21";
-    }
+    let theKy = parseInt(a/100+1);
 
     if (((a+b>c)&&(a+c>b))&&(b+c>a)) {
         tamgiac = "a,b,c la 3 canh cua 1 tam giac";
@@ -49,7 +44,7 @@
         + "a^2 la: " + a*a + "<br/>"
         + "a^b la: " + a**b + "<br/>"
         + "Tong cac so tu a den b la: " + sum + "<br/>"
-        + "Nam " + a + d +"<br/>"
+        + 'Nam ' + a + ' thuoc the ky thu ' + theKy + "<br/>"
         + tamgiac +"<br/>";
 }
 

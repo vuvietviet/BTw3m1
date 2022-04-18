@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Su dung ham co san cua mang</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    let myColor = ["Red","Green","White","Black"];
+    console.log(myColor.toString());
+
+
+    let numbers = prompt('Enter numbers: ','');
+    let numberArr = numbers.toString();
+    let result = [numberArr[0]];
+    for (let i=0; i<numberArr.length; i++) {
+        if ((numberArr[i-1]%2===0)&&(numberArr[i]%2===0)) {
+            result.push('-',numberArr[i]);
+        }else {
+            result.push(numberArr[i]);
+        }
+    }
+    console.log(result.join(''));
+
+    let str = prompt('Input string: ','');
+    let UPPER = 'AĂÂBCDĐEÊFGHIJKLMNOÔƠPQRSTUƯVWXYZ';
+    let LOWER = 'aăâbcdđeêfghijklmnoôơpqrstuưvwxyz';
+    let result1 = [];
+
+    for (let i = 0; i<str.length; i++) {
+        if (UPPER.indexOf(str[i]) !== -1) {
+            result1.push(str[i].toLowerCase());
+        }else if (LOWER.indexOf(str[i]) !== -1) {
+            result1.push(str[i].toUpperCase());
+        }else {
+            result1.push(str[i]);
+        }
+    }
+    console.log(result1.join(''));
+</script>

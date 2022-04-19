@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dem so ky tu so trong mang</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    let size = 0;
+    let a =  [
+        ['r', 2, 1, 4],
+        [8, 'c', 9],
+        [7, 0, 7, 2]
+    ];
+    let num = '0123456789';
+    let count = 0;
+    for (let i = 0; i<a.length; i++) {
+        size += a[i].length;
+        for (let j=0;j<a[i].length;j++) {
+            if (num.indexOf(a[i][j]) !==-1) {
+                count ++;
+            }
+        }
+    }
+    document.write( 'kich thuoc mang la: ' +size +"<br/>"
+                    + 'So ky tu so trong mang la: ' + count);
+</script>

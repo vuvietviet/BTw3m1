@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dem so tu trong mot chuoi</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    let str = 'This is a laptop';
+    let count = 1;
+    let num = '0123456789';
+    let UPPER = 'AĂÂBCDĐEÊFGHIJKLMNOÔƠPQRSTUƯVWXYZ';
+    let LOWER = 'aăâbcdđeêfghijklmnoôơpqrstuưvwxyz';
+    for (let i=0; i<str.length; i++) {
+        if (((num.indexOf(str[i]) !== -1)||(UPPER.indexOf(str[i]) !== -1))||(LOWER.indexOf(str[i]) !== -1)) {
+
+        } else {
+            count ++;
+        }
+    }
+    document.write('So tu trong mot chuoi la: ' + count);
+</script>

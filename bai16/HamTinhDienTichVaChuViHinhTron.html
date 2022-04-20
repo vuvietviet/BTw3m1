@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh dien tich va chu vi hinh tron</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    function circle(r) {
+        let dienTich = parseInt(r*r*Math.PI);
+        let chuVi = parseInt(2*r*Math.PI);
+        return 'Dien tich la: ' + dienTich + " ,chu vi la: "
+        + chuVi;
+    }
+    let round = parseFloat(prompt('Nhap ban kinh: ',''));
+    alert(circle(round));
+</script>

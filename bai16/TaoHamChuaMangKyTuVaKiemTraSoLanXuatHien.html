@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tao ham chua mang ky tu va kiem tra so lan xuat hien</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+
+    let a = prompt('Nhap ky tu bat ky: ','');
+    function test(k) {
+        let count = 0;
+        let strArr = ['q','a','g','h','a'];
+        for (let i=0;i<strArr.length;i++) {
+            if (k===strArr[i]) {
+                count++;
+            } else if ((i===strArr.length-1)&&(count===0)) {
+                return -1;
+            }
+        }
+        return 'Ky tu ' +k+ ' xuat hien ' +count+ ' lan trong mang';
+    }
+    alert(test(a));
+</script>

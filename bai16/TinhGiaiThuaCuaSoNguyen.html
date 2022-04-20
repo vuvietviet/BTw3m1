@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh giai thua cua so nguyen bat ky</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+  let num = parseInt(prompt('Nhap so nguyen: ',''));
+  function tinhGiaiThua(a) {
+      let giaiThua = 1;
+      for (let i = 1; i<=a; i++) {
+          giaiThua = giaiThua * i;
+      }
+      return 'Giai thua cua so ' + a + ' la: ' + giaiThua;
+  }
+  alert(tinhGiaiThua(num));
+</script>

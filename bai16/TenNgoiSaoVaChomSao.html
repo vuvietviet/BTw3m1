@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ten cau thu va ngoi sao</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    let InputStart = prompt('Input start: ','');
+    let tenNgoiSao = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let tenChomSao = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    function QuyDoi(str) {
+        for (let i = 0; i<tenNgoiSao.length; i++) {
+            if (str === tenNgoiSao[i]) {
+                return str + ' thuoc chom sao ' + tenChomSao[i];
+            } else if (i === tenNgoiSao.length-1){
+                return 'Not found';
+            }
+        }
+    }
+    alert(QuyDoi(InputStart));
+</script>

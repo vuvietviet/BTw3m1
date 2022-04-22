@@ -3,49 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <title>Ung dung quan ly san pham su dung ham</title>
+    <style>
+        tr:nth-child(odd){
+            background: antiquewhite;
+        }
+        table {
+            width: 50%;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-<div>
-    <form>
-        <h2>Add New Product</h2><br/>
-        <input type="text" id="add" placeholder="New Product"/>
-        <input type="button" value="Add" onclick="addName()"/><br/>
-
-        <h2>Edit Product</h2><br/>
-        <select id="listPro"></select>
-        <input type="button" value="Edit" onclick=""/>
-    </form>
+<div align="center">
+    <h2>Maganer Product</h2><br/>
+    <input type="text" id="nameP" placeholder="Name Product"/>
+    <button onclick="createP()">Add Product</button>
+    <button onclick="saveEdit()">Edit Product</button>
+    <br/>
+    <br/>
+    <table id="display" ></table>
 </div>
-<h2>Display All Product</h2>
-<div id="QuanLy"></div>
 </body>
 </html>
 
 <script>
     let proName = ['Sony Xperia','Samsung Galaxy','Iphone 13 ProMax','Oppo A71'];
-    let a = document.getElementById('QuanLy');
-    let d = '';
-    d += "<table><tr><th>STT</th><th>Product Name</th><th></th><th></th></tr>";
-    for (let i=0; i<proName.length;i++) {
-        d += "<tr><td>"+i+"</td><td>"+proName[i]+"</td><td><input type='button' value='Edit' onclick='editPro()'/></td><td><input type='button' value='Delete' onclick='deletePro()'/></td></tr>"
+    function createP() {
+        let name = document.getElementById('nameP').value;
+        proName.unshift(name);
+        console.log(proName);
+        show();
+        document.getElementById('nameP').value = '';
     }
-    d += "</table>"
-    a.innerHTML = d;
-    function addName() {
-        let valueAddName = document.getElementById('add').value;
-        proName.unshift(valueAddName);
-        let newProName = proName;
-        let k = '';
-        k += "<table><tr><th>STT</th><th>Product Name</th><th></th><th></th></tr>";
-        for (let j=0; j<newProName.length;j++) {
-            k += "<tr><td>"+j+"</td><td>"+newProName[j]+"</td><td><input type='button' value='Edit' onclick='editPro()'/></td><td><input type='button' value='Delete' onclick='deletePro()'/></td></tr>"
+    function show() {
+        let str = '';
+        for (let i = 0; i < proName.length; i++) {
+            str += "<tr>"
+            str += `<td>${i+1}</td>`
+            str += `<td>${proName[i]}</td>`
+            str += `<td><button onclick="showEdit(${i})">Edit</button></td>`
+            str += `<td><button onclick="deleteP(${i})">Delete</button></td>`
+            str += "</tr>"
         }
-        k += "</table>"
-        a.innerHTML = k;
+        document.getElementById('display').innerHTML = str;
     }
-    function editPro() {
-
+    function deleteP(index) {
+        proName.splice(index,1);
+        show();
     }
-
-
+    let indexP = -1;
+    function showEdit(index) {
+        document.getElementById('nameP').value = proName[index];
+        indexP = index;
+    }
+    function saveEdit() {
+        proName[indexP] = document.getElementById('nameP').value;
+        show();
+        indexP = -1;
+    }
+    show();
 </script>
